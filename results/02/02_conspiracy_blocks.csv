@@ -1,0 +1,13 @@
+scope,unit,subset,C→C,C→N,N→C,N→N
+English–English text,forwards,all,4055300,221594,1009879,2444233
+English–English text,forwards,within community,3783202,212243,928446,2420140
+English–English text,forwards,across communities,272098,9351,81433,24093
+English–English text,edges,all,431003,33064,121587,125368
+English–English text,edges,within community,366433,29454,104953,119925
+English–English text,edges,across communities,64570,3610,16634,5443
+"full graph, all",forwards,all,16207304,2228934,6409071,33102368
+"full graph, all",forwards,within community,14931471,2045946,5691151,31819998
+"full graph, all",forwards,across communities,1275833,182988,717920,1282370
+"full graph, all",edges,all,1180827,248319,614251,2633245
+"full graph, all",edges,within community,992777,208567,504323,2384409
+"full graph, all",edges,across communities,188050,39752,109928,248836
