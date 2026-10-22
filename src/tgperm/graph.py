@@ -79,6 +79,18 @@ def ccdf(values: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
     return x, 1.0 - idx / len(v)
 
 
+def renumber_by_size(raw) -> np.ndarray:
+    """Community ids ordered by size (0 = largest; ties broken by the smallest member vertex)."""
+    raw = np.asarray(raw)
+    sizes = np.bincount(raw)
+    first = np.full(len(sizes), len(raw))
+    np.minimum.at(first, raw, np.arange(len(raw)))
+    order = np.lexsort((first, -sizes))           # largest first, then earliest vertex
+    rank = np.empty_like(order)
+    rank[order] = np.arange(len(order))
+    return rank[raw]
+
+
 def leiden(g: ig.Graph, resolution: float = cfg.LEIDEN_RESOLUTION, seed: int = cfg.SEED,
            n_iterations: int = -1) -> tuple[np.ndarray, dict]:
     """Leiden with RBConfigurationVertexPartition on the directed weighted graph.
@@ -89,14 +101,8 @@ def leiden(g: ig.Graph, resolution: float = cfg.LEIDEN_RESOLUTION, seed: int = c
     t0 = time.time()
     part = la.find_partition(g, la.RBConfigurationVertexPartition, weights="weight",
                              resolution_parameter=resolution, seed=seed, n_iterations=n_iterations)
-    raw = np.asarray(part.membership)
-    sizes = np.bincount(raw)
-    first = np.full(len(sizes), len(raw))
-    np.minimum.at(first, raw, np.arange(len(raw)))
-    order = np.lexsort((first, -sizes))           # largest first, then earliest vertex
-    rank = np.empty_like(order)
-    rank[order] = np.arange(len(order))
-    membership = rank[raw]
+    membership = renumber_by_size(part.membership)
+    sizes = np.bincount(membership)
     meta = {
         "algorithm": "leidenalg.RBConfigurationVertexPartition",
         "resolution": resolution,
@@ -131,3 +137,22 @@ def mixing_matrix(edges: pd.DataFrame, community: pd.Series, keep: list[int],
            .pivot_table(index="src", columns="dst", values="w", aggfunc="sum", fill_value=0))
     labels = [str(k) for k in keep] + ([other_label] if other_label in mat.index.union(mat.columns) else [])
     return mat.reindex(index=labels, columns=labels, fill_value=0)
+
+
+def louvain(g: ig.Graph, seed: int = cfg.SEED) -> tuple[np.ndarray, dict]:
+    """Louvain (igraph `community_multilevel`, resolution 1) on an UNDIRECTED weighted graph.
+
+    igraph draws its random numbers from Python's `random` module, so seeding it fixes the result.
+    """
+    import random
+    assert not g.is_directed(), "igraph's Louvain supports undirected graphs only"
+    random.seed(seed)
+    t0 = time.time()
+    part = g.community_multilevel(weights="weight", resolution=1.0)
+    membership = renumber_by_size(part.membership)
+    meta = {"algorithm": "igraph.community_multilevel (Louvain)", "resolution": 1.0, "seed": seed,
+            "directed": False, "weighted": True, "nodes": g.vcount(), "edges": g.ecount(),
+            "n_communities": int(membership.max() + 1),
+            "modularity_undirected": float(g.modularity(membership.tolist(), weights="weight")),
+            "seconds": round(time.time() - t0, 1), "igraph_version": ig.__version__}
+    return membership, meta

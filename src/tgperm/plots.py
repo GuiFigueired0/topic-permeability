@@ -26,7 +26,8 @@ def blues_cmap() -> mpl.colors.Colormap:
     return mpl.colors.LinearSegmentedColormap.from_list("blues", BLUES)
 
 
-def savefig(fig: plt.Figure, name: str) -> None:
-    cfg.RESULTS.mkdir(parents=True, exist_ok=True)
-    for ext in ("png", "svg"):
-        fig.savefig(cfg.RESULTS / f"{name}.{ext}")
+def savefig(fig: plt.Figure, name: str, folder=cfg.RESULTS) -> None:
+    """Save as PNG in `folder` (one subfolder of results/ per notebook, e.g. results/02)."""
+    folder.mkdir(parents=True, exist_ok=True)
+    fig.savefig(folder / f"{name}.png")
+    # fig.savefig(folder / f"{name}.svg")   # vector version for the paper; re-enable when writing it

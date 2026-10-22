@@ -94,3 +94,27 @@ def build_edges(con: duckdb.DuckDBPyConnection, overwrite: bool = False) -> dict
             ORDER BY src_id, dest_id
         ) TO '{en.as_posix()}' (FORMAT parquet, COMPRESSION zstd)""")
     return {"full": full, "en": en}
+
+
+def build_en_text_windows(con: duckdb.DuckDBPyConnection, overwrite: bool = False) -> Path:
+    """Write `edges_en_text_windows.parquet`: English-English TEXT forwards per edge (src -> dest), in total
+    and in the two RQ3 windows of config (forward `date`, UTC, [start, end))."""
+    out = cfg.DERIVED / "edges_en_text_windows.parquet"
+    if overwrite or not out.exists():
+        t = lambda d: int(pd.Timestamp(d, tz="UTC").timestamp())
+        b0, b1 = map(t, cfg.WINDOW_BEFORE)
+        a0, a1 = map(t, cfg.WINDOW_AFTER)
+        con.sql(f"""COPY (
+            SELECT src_id, dest_id,
+                   count(*) AS n_text,
+                   count(*) FILTER (WHERE date >= {b0} AND date < {b1}) AS n_before,
+                   count(*) FILTER (WHERE date >= {a0} AND date < {a1}) AS n_after
+            FROM forwards
+            WHERE kind = 'text' AND src_id <> dest_id
+              AND src_id IN (SELECT channel_id FROM channels)
+              AND src_id IN (SELECT channel_id FROM lang WHERE language = 'en')
+              AND dest_id IN (SELECT channel_id FROM lang WHERE language = 'en')
+            GROUP BY src_id, dest_id
+            ORDER BY src_id, dest_id
+        ) TO '{out.as_posix()}' (FORMAT parquet, COMPRESSION zstd)""")
+    return out
