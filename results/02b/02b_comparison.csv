@@ -1,0 +1,14 @@
+,main (notebook 02),NC (δ = 1.64),DF (α = 0.05)
+channels with a community,120715,120715,82404
+communities,289,295,1987
+communities with ≥ 100 channels,34,33,44
+NMI with main partition,1.0,0.9757022951287239,0.8161998579013354
+adjusted Rand with main partition,1.0,0.9772941579878159,0.7686401174907325
+Sabmyk channels in one community,234 of 236,234 of 236,233 of 236
+English text forwards covered,1.0,1.0,0.992490239950661
+"crossing share, English text forwards (this partition)",0.05005493463593225,0.051045232664416504,0.05504859409968633
+"crossing share, same forwards, main partition",0.05005493463593225,0.05005493463593225,0.0501704168984333
+conspiracy impurity reduction (this partition),0.346775411439044,0.3426545716777448,0.42195805755805504
+"conspiracy impurity reduction, same channels, main partition",0.346775411439044,0.346775411439044,0.40558524165027576
+crossings involving a conspiracy channel (this partition),0.9377401640932876,0.9390113802514247,0.9228405364773844
+"crossings involving a conspiracy channel, main partition",0.9377401640932876,0.9377401640932876,0.9395747554909015
