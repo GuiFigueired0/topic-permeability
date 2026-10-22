@@ -1,0 +1,11 @@
+role,scope,channels,conspiracy_share,forwards_to_core,forwards_from_core
+CORE,full graph,10066,1.0,0,0
+feeder (sends only),full graph,19616,0.041904567699836866,2201512,0
+two-way,full graph,19820,0.0,4038374,1743248
+absorber (receives only),full graph,8615,0.04155542658154382,0,396278
+no direct tie,full graph,62598,0.005894757020991086,0,0
+CORE,English–English,4282,1.0,0,0
+feeder (sends only),English–English,2851,0.1241669589617678,640111,0
+two-way,English–English,2567,0.0,875929,267726
+absorber (receives only),English–English,462,0.23376623376623376,0,97378
+no direct tie,English–English,8054,0.012788676434070027,0,0
