@@ -1,7 +1,0 @@
-,full-graph partition (main),English-only partition
-communities containing English channels,74.0,141.0
-… with ≥ 100 English channels,16.0,17.0
-directed modularity on the English graph,0.7225080053064097,0.737190083757759
-"crossing share, English text forwards",0.05005493463593225,0.10194546479462052
-"crossing share, English text edges",0.1269398133953661,0.24375898354762582
-conspiracy impurity reduction,0.38538642380951305,0.382292920597767
