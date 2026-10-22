@@ -1,0 +1,17 @@
+,overall crossing rate,Spearman with main,verdicts kept (of 13),changed
+main,0.05005493463593225,1.0,13,—
+seed 1,0.05019566664415989,1.0,13,—
+seed 2,0.05042629639661384,0.9945054945054945,12,Extremists and radicals: less → not distinguishable
+seed 3,0.04979856437829695,0.9945054945054945,13,—
+seed 4,0.050174970760597,1.0,13,—
+seed 5,0.0501223256067839,0.9945054945054945,13,—
+seed 6,0.050308976606666715,1.0,13,—
+seed 7,0.050158155355202155,1.0,12,Extremists and radicals: less → not distinguishable
+seed 8,0.05007446637604472,1.0,13,—
+seed 9,0.05042358006189621,1.0,12,Extremists and radicals: less → not distinguishable
+seed 10,0.04969405016630436,1.0,13,—
+γ = 0.5,0.010602371799996017,0.5714285714285714,8,"Covid: more → not distinguishable, Crypto: not distinguishable → more, Entertainment: not distinguishable → more, Porn: less → not distinguishable, Religion: not distinguishable → more"
+γ = 2.0,0.05235851582575411,0.9725274725274725,13,—
+unweighted,0.04921545785891254,0.9230769230769231,12,Entertainment: not distinguishable → less
+undirected Leiden,0.05022127780006897,1.0,13,—
+Louvain (undirected),0.05106515245234579,0.9945054945054945,13,—
