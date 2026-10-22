@@ -1,0 +1,40 @@
+measure,topic,sources,rate,interval global (pp),verdict global,interval by community (pp),verdict by community,width ratio by community,interval by topic (pp),verdict by topic,width ratio by topic
+RQ1 crossing communities,Carding,1444,0.0052462700273333265,"[-5.3, -3.7]",less,"[-5.3, -3.7]",less,1.0286029383364426,"[-5.2, -3.8]",less,0.9512074556098978
+RQ1 crossing communities,Covid,1543,0.0993547694742914,"[+2.7, +7.3]",more,"[+2.7, +7.4]",more,1.027256985036487,"[+2.7, +7.3]",more,1.0162597319363598
+RQ1 crossing communities,Crypto,471,0.03701041207708183,"[-3.6, +2.6]",not distinguishable,"[-3.6, +1.8]",not distinguishable,0.8670789062847466,"[-3.4, +2.1]",not distinguishable,0.9010458907274351
+RQ1 crossing communities,Entertainment,1029,0.0469069095984072,"[-2.6, +3.1]",not distinguishable,"[-2.5, +2.9]",not distinguishable,0.945048329591185,"[-2.6, +2.9]",not distinguishable,0.95642609992465
+RQ1 crossing communities,Extremists and radicals,888,0.03511831506745446,"[-2.7, -0.0]",less,"[-2.8, +0.0]",not distinguishable,1.0375794243528242,"[-2.8, -0.0]",less,1.0044460317938089
+RQ1 crossing communities,Indian edu,694,0.0033920392480021465,"[-5.4, -3.9]",less,"[-5.4, -3.9]",less,0.9919325697709342,"[-5.4, -3.9]",less,0.9952885378146874
+RQ1 crossing communities,Porn,674,0.0148161034090306,"[-4.8, -2.1]",less,"[-4.7, -2.1]",less,0.9576371989897265,"[-4.6, -2.1]",less,0.9426757261765681
+RQ1 crossing communities,Religion,4046,0.052498088468509285,"[-0.9, +1.3]",not distinguishable,"[-0.9, +1.4]",not distinguishable,1.0380359868938829,"[-0.9, +1.5]",not distinguishable,1.0714734328620164
+RQ1 crossing communities,Social,153,0.023069794664195484,"[-4.6, +0.9]",not distinguishable,"[-4.4, +0.7]",not distinguishable,0.9248839085596565,"[-4.4, +0.8]",not distinguishable,0.9576387335231362
+RQ1 crossing communities,Software,712,0.028261285784448385,"[-4.2, +1.6]",not distinguishable,"[-4.1, +1.6]",not distinguishable,0.9886238800678674,"[-4.1, +1.7]",not distinguishable,1.0024076172316718
+RQ1 crossing communities,US news,2749,0.0521575836607973,"[-0.7, +1.1]",not distinguishable,"[-0.6, +1.1]",not distinguishable,0.9830371517766123,"[-0.7, +1.1]",not distinguishable,1.0187287984277025
+RQ1 crossing communities,Videogame modding,1638,0.0012097066598691626,"[-5.6, -4.1]",less,"[-5.7, -4.2]",less,1.0175495279935702,"[-5.6, -4.2]",less,0.9725563467091074
+RQ1 crossing communities,World news,855,0.13762971635357352,"[+5.6, +12.3]",more,"[+5.7, +12.0]",more,0.9505693967056916,"[+5.5, +12.1]",more,0.984031353083189
+RQ2 conspiracy → non-conspiracy,Carding,31,0.8327348892878516,"[+57.8, +91.9]",more,"[+60.1, +90.9]",more,0.9043008372683877,"[+58.2, +91.8]",more,0.9850902911087653
+RQ2 conspiracy → non-conspiracy,Covid,1019,0.02198105050523405,"[-4.6, -1.6]",less,"[-4.5, -1.7]",less,0.9618705768617579,"[-4.4, -1.7]",less,0.9362702978864933
+RQ2 conspiracy → non-conspiracy,Crypto,99,0.09744869661674986,"[-0.7, +13.9]",not distinguishable,"[-0.3, +13.2]",not distinguishable,0.9258024249803822,"[-0.7, +13.3]",not distinguishable,0.9612346140240586
+RQ2 conspiracy → non-conspiracy,Entertainment,29,0.9141720071401399,"[+36.3, +91.9]",more,"[+32.8, +91.7]",more,1.0585673689982271,"[+34.1, +91.4]",more,1.0298701117959834
+RQ2 conspiracy → non-conspiracy,Extremists and radicals,285,0.11842487336394825,"[+3.2, +10.8]",more,"[+3.0, +10.6]",more,0.9795886363438143,"[+3.1, +11.3]",more,1.069881426887781
+RQ2 conspiracy → non-conspiracy,Indian edu,6,0.7226027397260274,"[+8.7, +95.5]",more,"[+12.3, +95.5]",more,0.9583550462248882,"[+15.9, +95.3]",more,0.9150593719700735
+RQ2 conspiracy → non-conspiracy,Porn,5,0.9301897753679318,"[+78.1, +93.5]",more,"[+78.7, +93.0]",more,0.9335229226836985,"[+81.4, +92.6]",more,0.7238906090506163
+RQ2 conspiracy → non-conspiracy,Religion,969,0.1468849902534113,"[+6.7, +12.4]",more,"[+6.8, +12.5]",more,1.0121050433083563,"[+6.8, +13.1]",more,1.1089182961098873
+RQ2 conspiracy → non-conspiracy,Social,18,0.13071702567128946,"[-1.3, +32.1]",not distinguishable,"[-2.0, +27.8]",not distinguishable,0.8949364153543146,"[-1.2, +28.6]",not distinguishable,0.8924798291848107
+RQ2 conspiracy → non-conspiracy,Software,35,0.7503259792416419,"[+9.6, +87.2]",more,"[+8.9, +87.1]",more,1.0080698694526478,"[+8.6, +85.9]",more,0.9952410709071592
+RQ2 conspiracy → non-conspiracy,US news,1844,0.018470971086931853,"[-4.7, -2.3]",less,"[-4.7, -2.3]",less,0.9693980442768081,"[-4.7, -2.3]",less,0.9798236348760726
+RQ2 conspiracy → non-conspiracy,Videogame modding,5,0.9917550058892816,"[-5.5, +95.5]",not distinguishable,"[-5.9, +95.4]",not distinguishable,1.002880405846756,"[-5.1, +95.5]",not distinguishable,0.9958722158690063
+RQ2 conspiracy → non-conspiracy,World news,278,0.09322727971760364,"[+1.2, +7.3]",more,"[+1.2, +7.8]",more,1.0794625376869393,"[+1.2, +7.4]",more,0.9984406968095964
+RQ2 reverse non-consp. → conspiracy,Carding,1413,0.010209744854319063,"[-35.2, -21.3]",less,"[-35.0, -21.3]",less,0.9870132982973797,"[-35.6, -20.8]",less,1.0670678310638444
+RQ2 reverse non-consp. → conspiracy,Covid,524,0.8117955408248416,"[+38.4, +62.0]",more,"[+37.7, +62.1]",more,1.033003838319113,"[+38.6, +62.1]",more,0.9936395792076375
+RQ2 reverse non-consp. → conspiracy,Crypto,372,0.2772370118447285,"[-16.2, +15.2]",not distinguishable,"[-15.6, +15.3]",not distinguishable,0.983154571753741,"[-16.0, +14.1]",not distinguishable,0.9568353326665661
+RQ2 reverse non-consp. → conspiracy,Entertainment,1000,0.09350159796771286,"[-27.8, -11.8]",less,"[-27.4, -11.9]",less,0.9726765187160352,"[-28.2, -11.6]",less,1.0387345261745153
+RQ2 reverse non-consp. → conspiracy,Extremists and radicals,603,0.6654538271353198,"[+28.5, +46.0]",more,"[+28.3, +45.8]",more,0.9982642275585721,"[+28.1, +47.0]",more,1.0807136887255562
+RQ2 reverse non-consp. → conspiracy,Indian edu,688,0.009535938969990592,"[-35.0, -21.4]",less,"[-35.2, -21.4]",less,1.015232545184334,"[-35.4, -20.8]",less,1.0681238718342905
+RQ2 reverse non-consp. → conspiracy,Porn,669,0.044588389137244167,"[-31.9, -17.4]",less,"[-31.6, -17.6]",less,0.9644290216045619,"[-32.0, -17.0]",less,1.0322373940764824
+RQ2 reverse non-consp. → conspiracy,Religion,3077,0.4420359541181911,"[+6.9, +23.2]",more,"[+6.7, +23.0]",more,1.0037043723594858,"[+6.9, +23.5]",more,1.0184547355146547
+RQ2 reverse non-consp. → conspiracy,Social,135,0.04697908145378053,"[-31.6, -14.7]",less,"[-31.8, -15.1]",less,0.9899329122616847,"[-31.7, -13.7]",less,1.0616133026079888
+RQ2 reverse non-consp. → conspiracy,Software,677,0.0697630650976663,"[-29.8, -13.0]",less,"[-30.0, -12.6]",less,1.0358971772033703,"[-29.8, -12.5]",less,1.0257580047935742
+RQ2 reverse non-consp. → conspiracy,US news,905,0.7799285848524713,"[+38.0, +61.6]",more,"[+38.1, +60.9]",more,0.9666340979078021,"[+38.2, +61.7]",more,0.993935174287051
+RQ2 reverse non-consp. → conspiracy,Videogame modding,1633,0.0008974044555691314,"[-36.0, -22.1]",less,"[-36.1, -22.3]",less,0.9998298663900181,"[-36.4, -21.7]",less,1.0551424721584788
+RQ2 reverse non-consp. → conspiracy,World news,577,0.9215410227260729,"[+49.2, +67.3]",more,"[+47.7, +67.1]",more,1.0672648787324885,"[+48.5, +66.8]",more,1.0079759266582597
